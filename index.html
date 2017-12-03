@@ -1,0 +1,84 @@
+<!-- 
+Name: Ethan Cumming
+Email: Ethan_Cumming@student.uml.edu
+Affiliation: Student in comp.4610 GUI Programming I
+Date: Dec 3rd, 2017
+Description: In Homework 6, I focused on implementing Tabs and Sliders. Sliders are bound to the number
+of colums and rows. Implementing tabs with JQuery UI cause some comflicts with my other scripts, so I decided to use bootstrap tabs.
+I chose to add tabs verticaly. I could not get deleting individual tabs working. 
+ -->
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <title>HW6</title>
+  <meta name="dynamic table" content="HW4">
+  <meta name="Ethan Cumming" content="Table">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+  <link href="http://seiyria.com/bootstrap-slider/css/bootstrap-slider.css" rel="stylesheet"/>
+  <link href="http://seiyria.com/bootstrap-slider/dependencies/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="http://seiyria.com/bootstrap-slider/js/bootstrap-slider.js"></script>
+</head>
+
+
+<body><!-- Form Markup -->
+  <h1>Homework 6- Sliders and Tabs</h1>
+  <form data-toggle="validator" role="form" Id="myForm" class="col-sm-6" onSubmit="return false;">
+    <div class="form-group">
+        <div class="form-group">
+          Enter Col Name: <input type="text" class="form-control" id="rowname"  placeholder="Name"required/><br>
+        </div>
+          <!-- Enter Amount of MPG: <input type="number" class="qty" id="rowcount" placeholder="Enter 1 to 7"/><br> -->
+          <div class="form-group">
+          Enter Row Name: <input type="text" id="columnname" class="form-control" placeholder="Name"required/><br>
+          </div>
+          <div class="form-group">
+          Enter Number Amount of Col: <input type="number" max="7" class="form-control qty"  id="rowcount" placeholder="Enter 1 to 7" required/><br>
+          <input id="ex1" data-slider-id='ex1Slider' data-provide="slider" type="text" data-slider-min="1" data-slider-max="7" data-slider-step="1" />
+          </div>
+          <!-- Enter Amount of MPG: <input type="number" class="qty" id="rowcount" placeholder="Enter 1 to 7"/><br> -->
+          <div class="form-group">
+          Enter Number Amount of Rows : <input type="number" max="7"class="form-control qty" id="columncount" placeholder="Enter 1 to 7" required/><br>
+          <input id="ex2" data-slider-id='ex2Slider' data-provide="slider" type="text" data-slider-min="1" data-slider-max="7" data-slider-step="1" />
+          </div>
+          <!-- <input type="button submit" class="btn btn-primary" value="Create Table" onclick="createTable();"/> -->
+          <!-- <button type="submit" id="createTable" class="btn btn-primary" >Create Table</button> -->
+          <div class="form-group">
+              <button class="btn btn-primary" id="createTable" type="submit"> Submit</button>
+          </div>
+          <button type="button" class="btn btn-default" onclick="deleteTable()">Delete Tables</button>
+    </div>
+  </form>
+  <!-- Table Markup -->
+  <div class="col-md-6">
+  <div class="panel with-nav-tabs">
+      <ul class="nav nav-pills nav-stacked" id="box">
+              
+    
+      </ul>
+  </div>
+  </div>
+      
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

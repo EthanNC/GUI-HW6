@@ -1,0 +1,44 @@
+input{
+     border: 2px solid blue;
+    moz-border-radius: 4px;
+    webkit-border-radius: 4px;
+}
+
+.button {background-color: #008CBA;} /* Blue */
+
+body{
+    background-image: url("../images/gray.png");
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: black;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+table, th{
+    border: 1px solid grey;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+ }
+
+ #form{
+     padding: 3%;
+ }
+
+ button{
+    /* background-color: blue; */
+    color:white;
+    /* font-family: 'Poppins', sans-serif; */
+    border-radius: 4px;
+    moz-border-radius: 4px;
+    webkit-border-radius: 4px;
+    /*adjust height and width*/
+    /*change border colour*/
+    border:1px #245ec6 solid;
+ }
